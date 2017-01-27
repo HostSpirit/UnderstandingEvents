@@ -10,6 +10,12 @@ namespace UnderstandingEvents
     {
         static void Main(string[] args)
         {
+            NuclearReactor halfLife = new NuclearReactor();
+            CrisisCenter FEAR = new CrisisCenter(halfLife);
+            MeltdownInfo currentReactorState = new MeltdownInfo(2500);
+            halfLife.OnReactorMeltdown(currentReactorState);
+            Console.ReadKey();
+
         }
     }
 }
